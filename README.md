@@ -12,6 +12,8 @@ Lee este manual de la forma que te resulte más cómoda. En general hay "tres ca
 
 Yo no tengo formación técnica ni este manual pretende ser profesional, así que cada uno tiene que asumir la responsabilidad de revisar y ejecutar en su ordenador lo que considere.
 
+Considera este proyecto como un documento vivo, sujeto a revisión y mejora continua.
+
 ---
 
 
