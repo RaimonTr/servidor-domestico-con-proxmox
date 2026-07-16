@@ -1,7 +1,7 @@
 # Servidor doméstico con Proxmox VE
 
 > Manual práctico para construir un servidor doméstico con Proxmox VE
-> destinado a fotografías, música, películas y otros servicios
+> destinado a fotografías, películas, música y otros servicios
 > autoalojados. No solo explica cómo hacerlo, sino también por qué se
 > tomaron determinadas decisiones de arquitectura.
 
@@ -17,10 +17,10 @@ Las razones principales fueron:
 
 -   Separar el host de los servicios.
 -   Aislar aplicaciones mediante contenedores LXC y máquinas virtuales.
--   Facilitar el crecimiento sin reinstalar el sistema principal.
--   Reducir el impacto de futuras pruebas o experimentos.
 -   Simplificar la administración de una infraestructura con varios
     servicios.
+-   Facilitar el crecimiento sin reinstalar el sistema principal.
+-   Reducir el impacto de futuras pruebas o experimentos.
 -   Aprender virtualización utilizando una plataforma ampliamente
     implantada.
 
@@ -61,7 +61,7 @@ El manual recorre, entre otros, los siguientes temas:
 -   Backups
 -   Automatización
 -   Seguridad
--   Reconstrucción completa del sistema
+-   Recuperación y reconstrucción del sistema
 
 ------------------------------------------------------------------------
 
@@ -91,4 +91,3 @@ Atribución recomendada:
 > Basado en el trabajo de **[RaimonTr](https://github.com/RaimonTr/)**.
 
 Los comandos, scripts y ejemplos de código incluidos en este repositorio
-se ofrecen para su libre utilización, modificación y adaptación.
