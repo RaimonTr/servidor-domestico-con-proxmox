@@ -3,17 +3,19 @@
 
 ---
 
-## 📜 Copyright y Licencia
+## 📜 Copyright y licencia
 
-Este manual se distribuye bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**. 
+Este manual se distribuye bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**.
 
 ### Contenido técnico y literario
-Eres libre de compartir, adaptar y utilizar este material para cualquier propósito, incluso comercial, siempre que se atribuya adecuadamente la autoría original:
-> Basado en el trabajo de **[RaimonTr](https://github.com/RaimonTr/)**.
+
+Eres libre de compartir, adaptar y utilizar este material para cualquier propósito, incluso comercial, siempre que se atribuya adecuadamente la autoría original.
+
+> Basado en el trabajo de **RaimonTr**.
 
 ### Exención de responsabilidad
 
-El contenido de este manual se proporciona **«tal cual»**, con fines educativos y sin garantías de ningún tipo. Aunque se ha procurado verificar toda la información, el autor no se hace responsable de pérdidas de datos, daños en el hardware, interrupciones del servicio o problemas de seguridad derivados de la aplicación de los procedimientos descritos.
+El contenido de este manual se proporciona «tal cual», con fines educativos y sin garantías de ningún tipo. Aunque se ha procurado verificar toda la información, el autor no se hace responsable de pérdidas de datos, daños en el hardware, interrupciones del servicio o problemas de seguridad derivados de la aplicación de los procedimientos descritos.
 
 
 ---
