@@ -11,7 +11,7 @@ Este manual se distribuye bajo la licencia **Creative Commons Atribución 4.0 In
 
 Eres libre de compartir, adaptar y utilizar este material para cualquier propósito, incluso comercial, siempre que se atribuya adecuadamente la autoría original.
 
-> Basado en el trabajo de **RaimonTr**.
+**Autor original:** [RaimonTr](https://github.com/RaimonTr).
 
 ### Exención de responsabilidad
 
