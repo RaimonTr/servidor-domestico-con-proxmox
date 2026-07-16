@@ -11,9 +11,6 @@ Este manual se distribuye bajo la licencia **Creative Commons Atribución 4.0 In
 Eres libre de compartir, adaptar y utilizar este material para cualquier propósito, incluso comercial, siempre que se mantenga la atribución correspondiente al autor original:
 > Basado en el trabajo de **[RaimonTr](https://github.com/RaimonTr/)**.
 
-### Código, scripts y archivos de configuración
-Todos los comandos, scripts de Bash, configuraciones de Docker Compose y ejemplos de código incluidos en este repositorio se liberan bajo la **Licencia MIT**. Puedes usarlos, modificarlos y distribuirlos libremente sin restricciones.
-
 ### Exención de responsabilidad
 *El contenido de este manual se proporciona "tal cual", para fines educativos y sin garantías de ningún tipo. El autor no se hace responsable de pérdidas de datos, fallos de hardware o problemas de seguridad derivados de la aplicación de estas guías.*
 
