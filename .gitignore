@@ -11,3 +11,7 @@
 
 # Directorios de trabajo
 tmp/
+
+# Credenciales y secretos (¡Súper importante para Docker/Proxmox!)
+*.env
+*.secret
