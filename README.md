@@ -18,9 +18,9 @@ Considera este proyecto como un documento vivo, sujeto a revisión y mejora cont
 
 ### Sobre este proyecto
 
-Este libro ha sido escrito por mí con la ayuda de herramientas de inteligencia artificial utilizadas como apoyo para la redacción, la organización y la documentación técnica.
+Este manual/libro ha sido escrito por mí con la ayuda de herramientas de inteligencia artificial utilizadas como apoyo para la redacción, la organización y la documentación técnica.
 
-Todas las decisiones de arquitectura, los procedimientos descritos y las validaciones corresponden al autor del proyecto.
+Todas las decisiones de arquitectura, los procedimientos descritos y las validaciones realizadas sobre el proyecto son responsabilidad mía.
 
 ---
 
