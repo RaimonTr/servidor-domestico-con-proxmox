@@ -1,6 +1,18 @@
-### 2026-07-16 Notas a la última revisión.
+---
+
+### 2026-07-16 Notas a la última revisión
 
 Se ha implementado un nuevo contenedor LXC con [Forgero](https://forgejo.org/).
+
+---
+
+### Notas a la lectura
+
+Lee este manual de la forma que te resulte más cómoda. En general hay "tres capas" de lectura: la idea que llevaba en la cabeza, por qué he montado lo que he montado, y una parte más técnica con el "cómo". Saltate las partes que te aburran o que no te interesen saber el motivo que me llevó a tomar las decisiones.
+
+Yo no tengo formación técnica ni este manual pretende ser profesional, así que cada uno tiene que asumir la responsabilidad de revisar y ejecutar en su ordenador lo que considere.
+
+---
 
 
 # Servidor doméstico con Proxmox VE
@@ -13,7 +25,7 @@ Se ha implementado un nuevo contenedor LXC con [Forgero](https://forgejo.org/).
 > tomaron determinadas decisiones de arquitectura.
 
 ------------------------------------------------------------------------
-
+.
 ## 🧠 Filosofía del proyecto
 
 ### ¿Por qué Proxmox VE?
