@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Copias de seguridad
+*.bak
+*.backup
+
+# Directorios de trabajo
+tmp/
