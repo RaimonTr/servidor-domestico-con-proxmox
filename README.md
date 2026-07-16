@@ -1,5 +1,7 @@
 # Servidor doméstico con Proxmox VE
 
+[📖 Leer el manual completo](./servidor-domestico-con-proxmox.md)
+
 > Manual práctico para construir un servidor doméstico con Proxmox VE
 > destinado a fotografías, películas, música y otros servicios
 > autoalojados. No solo explica cómo hacerlo, sino también por qué se
