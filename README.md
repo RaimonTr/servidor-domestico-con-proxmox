@@ -19,10 +19,7 @@ Yo no tengo formación técnica ni este manual pretende ser profesional, así qu
 
 [📖 Leer el manual completo](./servidor-domestico-con-proxmox.md)
 
-> Manual práctico para construir un servidor doméstico con Proxmox VE
-> destinado a fotografías, películas, música y otros servicios
-> autoalojados. No solo explica cómo hacerlo, sino también por qué se
-> tomaron determinadas decisiones de arquitectura.
+> Manual práctico para construir un servidor doméstico con **Proxmox VE**, una plataforma de virtualización de código abierto que permite ejecutar contenedores y máquinas virtuales. El manual explica cómo crear una infraestructura para fotografías, películas, música y otros servicios autoalojados, y también las razones que hay detrás de cada decisión de arquitectura.
 
 ------------------------------------------------------------------------
 .
