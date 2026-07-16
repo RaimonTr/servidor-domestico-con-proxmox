@@ -1,3 +1,8 @@
+### 2026-07-16 Notas a la última revisión.
+
+Se ha implementado un nuevo contenedor LXC con [Forgero](https://forgejo.org/).
+
+
 # Servidor doméstico con Proxmox VE
 
 [📖 Leer el manual completo](./servidor-domestico-con-proxmox.md)
