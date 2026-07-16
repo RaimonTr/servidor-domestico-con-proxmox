@@ -1,34 +1,81 @@
 # serviplan
 ## Libro técnico y humano de un servidor doméstico
 
-**Edición editorial completa para revisión · 2026-07-11**
+---
+
+## 📜 Copyright y Licencia
+
+Este manual se distribuye bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**. 
+
+### Contenido técnico y literario
+Eres libre de compartir, adaptar y utilizar este material para cualquier propósito, incluso comercial, siempre que se mantenga la atribución correspondiente al autor original:
+> Basado en el trabajo de **[RaimonTr](https://github.com/RaimonTr/)**.
+
+### Código, scripts y archivos de configuración
+Todos los comandos, scripts de Bash, configuraciones de Docker Compose y ejemplos de código incluidos en este repositorio se liberan bajo la **Licencia MIT**. Puedes usarlos, modificarlos y distribuirlos libremente sin restricciones.
+
+### Exención de responsabilidad
+*El contenido de este manual se proporciona "tal cual", para fines educativos y sin garantías de ningún tipo. El autor no se hace responsable de pérdidas de datos, fallos de hardware o problemas de seguridad derivados de la aplicación de estas guías.*
+
 
 ---
+
+# Índice general
+
+- [Capítulo 0. El origen](#capítulo-0-el-origen)
+- [Capítulo 1. Filosofía del proyecto](#capítulo-1-filosofía-del-proyecto)
+- [Capítulo 2. Cronología técnica](#capítulo-2-cronología-técnica)
+- [Capítulo 3. Inventario físico](#capítulo-3-inventario-físico)
+- [Capítulo 4. Arquitectura lógica](#capítulo-4-arquitectura-lógica)
+- [Capítulo 5. Red y comunicaciones](#capítulo-5-red-y-comunicaciones)
+- [Capítulo 6. CT100 · Immich](#capítulo-6-ct100--immich)
+- [Capítulo 7. CT101 · Multimedia](#capítulo-7-ct101--multimedia)
+- [Capítulo 8. Backups y recuperación](#capítulo-8-backups-y-recuperación)
+- [Capítulo 9. Operaciones de mantenimiento](#capítulo-9-operaciones-de-mantenimiento)
+- [Capítulo 10. Reconstrucción tras desastre](#capítulo-10-reconstrucción-tras-desastre)
+- [Capítulo 11. Incidencias históricas y lecciones](#capítulo-11-incidencias-históricas-y-lecciones)
+- [Capítulo 12. Filosofía de operación](#capítulo-12-filosofía-de-operación)
+- [Capítulo 13. Estado actual y pendientes](#capítulo-13-estado-actual-y-pendientes)
+- [Capítulo 14. Hoja de ruta](#capítulo-14-hoja-de-ruta)
+- [Capítulo 15. Epílogo](#capítulo-15-epílogo)
+
+---
+
 
 # Capítulo 0. El origen
 
 > *«Un servidor no nace el día que se instala un sistema operativo. Nace mucho antes, la primera vez que alguien siente curiosidad por entender qué ocurre al otro lado de la pantalla.»*
 
+
 ## Índice
 
+- [0.0 La pérdida de soberanía sobre los datos](#00-la-pérdida-de-soberanía-sobre-los-datos)
 
+- [0.1 Un servidor que empezó mucho antes de existir](#01-un-servidor-que-empezó-mucho-antes-de-existir)
 
-[0.0 La pérdida de soberanía sobre los datos](#00-la-pérdida-de-soberanía-sobre-los-datos)
-[0.1 Un servidor que empezó mucho antes de existir](#01-un-servidor-que-empezó-mucho-antes-de-existir)
-[0.2 BASIC y la idea de que una máquina podía cambiarse](#02-basic-y-la-idea-de-que-una-máquina-podía-cambiarse)
-[0.3 MS-DOS, memoria convencional y disciplina técnica](#03-ms-dos-memoria-convencional-y-disciplina-técnica)
-[0.4 Los primeros servicios de red](#04-los-primeros-servicios-de-red)
-[0.5 Linux, Ubuntu y la libertad de comprender](#05-linux-ubuntu-y-la-libertad-de-comprender)
-[0.6 macOS y la separación pragmática de funciones](#06-macos-y-la-separación-pragmática-de-funciones)
-[0.7 La pérdida de soberanía sobre los datos](#07-la-pérdida-de-soberanía-sobre-los-datos)
-[0.8 La inteligencia artificial como acelerador](#08-la-inteligencia-artificial-como-acelerador)
-[0.9 El nacimiento de `serviplan`](#09-el-nacimiento-de-serviplan)
-[0.10 Por qué existe este libro](#010-por-qué-existe-este-libro)
-[0.11 Una infraestructura construida por una comunidad](#011-una-infraestructura-construida-por-una-comunidad)
-[0.12 El lector de dentro de veinticinco años](#012-el-lector-de-dentro-de-veinticinco-años)
-[0.13 Cierre](#013-cierre)
+- [0.2 BASIC y la idea de que una máquina podía cambiarse](#02-basic-y-la-idea-de-que-una-máquina-podía-cambiarse)
 
----
+- [0.3 MS-DOS, memoria convencional y disciplina técnica](#03-ms-dos-memoria-convencional-y-disciplina-técnica)
+
+- [0.4 Los primeros servicios de red](#04-los-primeros-servicios-de-red)
+
+- [0.5 Linux, Ubuntu y la libertad de comprender](#05-linux-ubuntu-y-la-libertad-de-comprender)
+
+- [0.6 macOS y la separación pragmática de funciones](#06-macos-y-la-separación-pragmática-de-funciones)
+
+- [0.7 La pérdida de soberanía sobre los datos](#07-la-pérdida-de-soberanía-sobre-los-datos)
+
+- [0.8 La inteligencia artificial como acelerador](#08-la-inteligencia-artificial-como-acelerador)
+
+- [0.9 El nacimiento de `serviplan`](#09-el-nacimiento-de-serviplan)
+
+- [0.10 Por qué existe este libro](#010-por-qué-existe-este-libro)
+
+- [0.11 Una infraestructura construida por una comunidad](#011-una-infraestructura-construida-por-una-comunidad)
+
+- [0.12 El lector de dentro de veinticinco años](#012-el-lector-de-dentro-de-veinticinco-años)
+
+- [0.13 Cierre](#013-cierre)
 
 
 ---
@@ -446,20 +493,29 @@ Todo lo que aparece en los capítulos siguientes procede, de una forma u otra, d
 
 ## Índice
 
-## Índice
+- [1.1 Qué pretende realmente `serviplan`](#11-qué-pretende-realmente-serviplan)
 
-[1.1 Qué pretende realmente `serviplan`](#11-qué-pretende-realmente-serviplan)  
-[1.2 Lo que este proyecto no es](#12-lo-que-este-proyecto-no-es)  
-[1.3 Soberanía tecnológica](#13-soberanía-tecnológica)  
-[1.4 Independencia razonable frente a proveedores](#14-independencia-razonable-frente-a-proveedores)  
-[1.5 Simplicidad como decisión técnica](#15-simplicidad-como-decisión-técnica)  
-[1.6 Documentar para desaparecer](#16-documentar-para-desaparecer)  
-[1.7 Estabilidad y experimentación](#17-estabilidad-y-experimentación)  
-[1.8 El valor de eliminar](#18-el-valor-de-eliminar)  
-[1.9 Reconstrucción antes que improvisación](#19-reconstrucción-antes-que-improvisación)  
-[1.10 La comunidad como cimiento](#110-la-comunidad-como-cimiento)  
-[1.11 Principios permanentes](#111-principios-permanentes)  
-[1.12 Cierre](#112-cierre)
+- [1.2 Lo que este proyecto no es](#12-lo-que-este-proyecto-no-es)
+
+- [1.3 Soberanía tecnológica](#13-soberanía-tecnológica)
+
+- [1.4 Independencia razonable frente a proveedores](#14-independencia-razonable-frente-a-proveedores)
+
+- [1.5 Simplicidad como decisión técnica](#15-simplicidad-como-decisión-técnica)
+
+- [1.6 Documentar para desaparecer](#16-documentar-para-desaparecer)
+
+- [1.7 Estabilidad y experimentación](#17-estabilidad-y-experimentación)
+
+- [1.8 El valor de eliminar](#18-el-valor-de-eliminar)
+
+- [1.9 Reconstrucción antes que improvisación](#19-reconstrucción-antes-que-improvisación)
+
+- [1.10 La comunidad como cimiento](#110-la-comunidad-como-cimiento)
+
+- [1.11 Principios permanentes](#111-principios-permanentes)
+
+- [1.12 Cierre](#112-cierre)
 
 ---
 
@@ -716,12 +772,12 @@ Todo lo demás —hardware, sistemas operativos y aplicaciones— podrá cambiar
 
 ## Índice del capítulo
 
-1. [Cómo leer esta cronología](#21-cómo-leer-esta-cronología)
-2. [Lo que ocurrió antes de `serviplan`](#22-lo-que-ocurrió-antes-de-serviplan)
-3. [La soberanía tecnológica como motivo](#23-la-soberanía-tecnológica-como-motivo)
-4. [La primera implantación sobre Ubuntu Server](#24-la-primera-implantación-sobre-ubuntu-server)
-5. [Cuando un servidor se convirtió en infraestructura](#25-cuando-un-servidor-se-convirtió-en-infraestructura)
-6. [El valor histórico de la etapa Ubuntu](#26-el-valor-histórico-de-la-etapa-ubuntu)
+- [2.1 Cómo leer esta cronología](#21-cómo-leer-esta-cronología)
+- [2.2 Lo que ocurrió antes de `serviplan`](#22-lo-que-ocurrió-antes-de-serviplan)
+- [2.3 La soberanía tecnológica como motivo](#23-la-soberanía-tecnológica-como-motivo)
+- [2.4 La primera implantación sobre Ubuntu Server](#24-la-primera-implantación-sobre-ubuntu-server)
+- [2.5 Cuando un servidor se convirtió en infraestructura](#25-cuando-un-servidor-se-convirtió-en-infraestructura)
+- [2.6 El valor histórico de la etapa Ubuntu](#26-el-valor-histórico-de-la-etapa-ubuntu)
 
 ---
 
@@ -893,17 +949,17 @@ La conclusión de esta primera etapa fue doble:
 
 ## Índice de esta parte
 
-1. [El MSI reutilizado](#27-el-msi-reutilizado)
-2. [Por qué Proxmox](#28-por-qué-proxmox)
-3. [La sustitución del SSD](#29-la-sustitución-del-ssd)
-4. [La migración concentrada](#210-la-migración-concentrada)
-5. [Del sistema monolítico a las capas](#211-del-sistema-monolítico-a-las-capas)
-6. [CT100 · Immich](#212-ct100--immich)
-7. [CT101 · Multimedia](#213-ct101--multimedia)
-8. [Red, direccionamiento y arranque](#214-red-direccionamiento-y-arranque)
-9. [El host como infraestructura](#215-el-host-como-infraestructura)
-10. [Docker dentro de LXC](#216-docker-dentro-de-lxc)
-11. [Passthrough de la GPU](#217-passthrough-de-la-gpu)
+- [2.7 El MSI reutilizado](#27-el-msi-reutilizado)
+- [2.8 Por qué Proxmox](#28-por-qué-proxmox)
+- [2.9 La sustitución del SSD](#29-la-sustitución-del-ssd)
+- [2.10 La migración concentrada](#210-la-migración-concentrada)
+- [2.11 Del sistema monolítico a las capas](#211-del-sistema-monolítico-a-las-capas)
+- [2.12 CT100 · Immich](#212-ct100--immich)
+- [2.13 CT101 · Multimedia](#213-ct101--multimedia)
+- [2.14 Red, direccionamiento y arranque](#214-red-direccionamiento-y-arranque)
+- [2.15 El host como infraestructura](#215-el-host-como-infraestructura)
+- [2.16 Docker dentro de LXC](#216-docker-dentro-de-lxc)
+- [2.17 Passthrough de la GPU](#217-passthrough-de-la-gpu)
 
 ---
 
@@ -1186,16 +1242,16 @@ La corrección posterior de una entrada obsoleta confirmó que esta configuraci�
 
 ## Índice de esta parte
 
-1. [La migración no terminó con el primer arranque](#218-la-migración-no-terminó-con-el-primer-arranque)
-2. [Tailscale como capa única de acceso remoto](#219-tailscale-como-capa-única-de-acceso-remoto)
-3. [HTTP dentro de la tailnet](#220-http-dentro-de-la-tailnet)
-4. [La normalización de SSH](#221-la-normalización-de-ssh)
-5. [Strongbox y el entorno de administración](#222-strongbox-y-el-entorno-de-administración)
-6. [CT102 y la utilidad de renunciar](#223-ct102-y-la-utilidad-de-renunciar)
-7. [Dos sistemas de backup, no uno](#224-dos-sistemas-de-backup-no-uno)
-8. [HDDBU](#225-hddbu)
-9. [SwissBackup](#226-swissbackup)
-10. [La recuperación como criterio de diseño](#227-la-recuperación-como-criterio-de-diseño)
+- [2.18 La migración no terminó con el primer arranque](#218-la-migración-no-terminó-con-el-primer-arranque)
+- [2.19 Tailscale como capa única de acceso remoto](#219-tailscale-como-capa-única-de-acceso-remoto)
+- [2.20 HTTP dentro de la tailnet](#220-http-dentro-de-la-tailnet)
+- [2.21 La normalización de SSH](#221-la-normalización-de-ssh)
+- [2.22 Strongbox y el entorno de administración](#222-strongbox-y-el-entorno-de-administración)
+- [2.23 CT102 y la utilidad de renunciar](#223-ct102-y-la-utilidad-de-renunciar)
+- [2.24 Dos sistemas de backup, no uno](#224-dos-sistemas-de-backup-no-uno)
+- [2.25 HDDBU](#225-hddbu)
+- [2.26 SwissBackup](#226-swissbackup)
+- [2.27 La recuperación como criterio de diseño](#227-la-recuperación-como-criterio-de-diseño)
 
 ---
 
@@ -1463,16 +1519,16 @@ La reconstrucción no empieza por instalar Proxmox. Empieza por recuperar creden
 
 ## Índice de esta parte
 
-1. [VFIO y la eliminación de una configuración obsoleta](#228-vfio-y-la-eliminación-de-una-configuración-obsoleta)
-2. [La batería y el límite de lo razonable](#229-la-batería-y-el-límite-de-lo-razonable)
-3. [Windows queda fuera](#230-windows-queda-fuera)
-4. [Snapshots: capacidad disponible, aprendizaje pendiente](#231-snapshots-capacidad-disponible-aprendizaje-pendiente)
-5. [La restauración completa aún no probada](#232-la-restauración-completa-aún-no-probada)
-6. [Observabilidad y servicios `oneshot`](#233-observabilidad-y-servicios-oneshot)
-7. [Canon, historia y pendientes](#234-canon-historia-y-pendientes)
-8. [La documentación como cierre real de la migración](#235-la-documentación-como-cierre-real-de-la-migración)
-9. [Servicios críticos y datos prescindibles](#236-servicios-críticos-y-datos-prescindibles)
-10. [Estabilidad y experimentación](#237-estabilidad-y-experimentación)
+- [2.28 VFIO y la eliminación de una configuración obsoleta](#228-vfio-y-la-eliminación-de-una-configuración-obsoleta)
+- [2.29 La batería y el límite de lo razonable](#229-la-batería-y-el-límite-de-lo-razonable)
+- [2.30 Windows queda fuera](#230-windows-queda-fuera)
+- [2.31 Snapshots: capacidad disponible, aprendizaje pendiente](#231-snapshots-capacidad-disponible-aprendizaje-pendiente)
+- [2.32 La restauración completa aún no probada](#232-la-restauración-completa-aún-no-probada)
+- [2.33 Observabilidad y servicios `oneshot`](#233-observabilidad-y-servicios-oneshot)
+- [2.34 Canon, historia y pendientes](#234-canon-historia-y-pendientes)
+- [2.35 La documentación como cierre real de la migración](#235-la-documentación-como-cierre-real-de-la-migración)
+- [2.36 Servicios críticos y datos prescindibles](#236-servicios-críticos-y-datos-prescindibles)
+- [2.37 Estabilidad y experimentación](#237-estabilidad-y-experimentación)
 
 ---
 
@@ -1741,15 +1797,15 @@ La infraestructura principal no debe cambiar cada semana, pero debe permitir que
 
 ## Índice de esta parte
 
-1. [Cronología resumida de hitos confirmados](#238-cronología-resumida-de-hitos-confirmados)
-2. [Qué significó realmente «funciona todo»](#239-qué-significó-realmente-funciona-todo)
-3. [La primera arquitectura estable](#240-la-primera-arquitectura-estable)
-4. [Decisiones que deben conservarse](#241-decisiones-que-deben-conservarse)
-5. [Decisiones revisables](#242-decisiones-revisables)
-6. [Pendientes al cierre de la etapa](#243-pendientes-al-cierre-de-la-etapa)
-7. [Qué no debe deducirse](#244-qué-no-debe-deducirse)
-8. [El resultado humano](#245-el-resultado-humano)
-9. [Conclusión del capítulo](#246-conclusión-del-capítulo)
+- [2.38 Cronología resumida de hitos confirmados](#238-cronología-resumida-de-hitos-confirmados)
+- [2.39 Qué significó realmente «funciona todo»](#239-qué-significó-realmente-funciona-todo)
+- [2.40 La primera arquitectura estable](#240-la-primera-arquitectura-estable)
+- [2.41 Decisiones que deben conservarse](#241-decisiones-que-deben-conservarse)
+- [2.42 Decisiones revisables](#242-decisiones-revisables)
+- [2.43 Pendientes al cierre de la etapa](#243-pendientes-al-cierre-de-la-etapa)
+- [2.44 Qué no debe deducirse](#244-qué-no-debe-deducirse)
+- [2.45 El resultado humano](#245-el-resultado-humano)
+- [2.46 Conclusión del capítulo](#246-conclusión-del-capítulo)
 
 ---
 
@@ -2040,21 +2096,21 @@ A partir del capítulo siguiente, el libro abandona la secuencia histórica y de
 
 ## Índice
 
-3.1 Función de este capítulo  
-3.2 Criterio de elección del hardware  
-3.3 Host físico  
-3.4 Procesador  
-3.5 Memoria RAM  
-3.6 Almacenamiento principal  
-3.7 GPU integrada y passthrough  
-3.8 Alimentación y batería  
-3.9 Refrigeración y temperaturas  
-3.10 Conectividad física  
-3.11 BIOS / UEFI y comportamiento de la tapa  
-3.12 Limitaciones conocidas  
-3.13 Inventario físico resumido  
-3.14 Datos pendientes de verificación  
-3.15 Cierre
+- [3.1 Función de este capítulo](#31-función-de-este-capítulo)
+- [3.2 Criterio de elección del hardware](#32-criterio-de-elección-del-hardware)
+- [3.3 Host físico](#33-host-físico)
+- [3.4 Procesador](#34-procesador)
+- [3.5 Memoria RAM](#35-memoria-ram)
+- [3.6 Almacenamiento principal](#36-almacenamiento-principal)
+- [3.7 GPU integrada y passthrough](#37-gpu-integrada-y-passthrough)
+- [3.8 Alimentación y batería](#38-alimentación-y-batería)
+- [3.9 Refrigeración y temperaturas](#39-refrigeración-y-temperaturas)
+- [3.10 Conectividad física](#310-conectividad-física)
+- [3.11 BIOS / UEFI y comportamiento de la tapa](#311-bios--uefi-y-comportamiento-de-la-tapa)
+- [3.12 Limitaciones conocidas](#312-limitaciones-conocidas)
+- [3.13 Inventario físico resumido](#313-inventario-físico-resumido)
+- [3.14 Datos pendientes de verificación](#314-datos-pendientes-de-verificación)
+- [3.15 Cierre](#315-cierre)
 
 ---
 
@@ -2503,20 +2559,20 @@ Procede de la coherencia entre:
 
 ## Índice
 
-4.1 Visión general  
-4.2 Principios de diseño  
-4.3 Capas de la infraestructura  
-4.4 Host Proxmox  
-4.5 CT100 · Immich  
-4.6 CT101 · Multimedia  
-4.7 Docker dentro de LXC  
-4.8 Tailscale en el host  
-4.9 Almacenamiento lógico  
-4.10 Dependencias externas  
-4.11 Elementos que no forman parte del canon  
-4.12 Diagrama lógico completo  
-4.13 Estado, historia y pendientes  
-4.14 Cierre
+- [4.1 Visión general](#41-visión-general)
+- [4.2 Principios de diseño](#42-principios-de-diseño)
+- [4.3 Capas de la infraestructura](#43-capas-de-la-infraestructura)
+- [4.4 Host Proxmox](#44-host-proxmox)
+- [4.5 CT100 · Immich](#45-ct100--immich)
+- [4.6 CT101 · Multimedia](#46-ct101--multimedia)
+- [4.7 Docker dentro de LXC](#47-docker-dentro-de-lxc)
+- [4.8 Tailscale en el host](#48-tailscale-en-el-host)
+- [4.9 Almacenamiento lógico](#49-almacenamiento-lógico)
+- [4.10 Dependencias externas](#410-dependencias-externas)
+- [4.11 Elementos que no forman parte del canon](#411-elementos-que-no-forman-parte-del-canon)
+- [4.12 Diagrama lógico completo](#412-diagrama-lógico-completo)
+- [4.13 Estado, historia y pendientes](#413-estado-historia-y-pendientes)
+- [4.14 Cierre](#414-cierre)
 
 ---
 
@@ -2884,23 +2940,23 @@ Esa división es la base del resto del libro.
 
 ## Índice
 
-5.1 Función de la red en `serviplan`  
-5.2 Topología general  
-5.3 Direccionamiento LAN  
-5.4 Bridge de Proxmox  
-5.5 Reservas DHCP  
-5.6 Resolución de nombres  
-5.7 Acceso administrativo por SSH  
-5.8 Tailscale  
-5.9 Tailscale Serve  
-5.10 Servicios publicados  
-5.11 Por qué no se abren puertos en el router  
-5.12 HTTP dentro de la tailnet  
-5.13 Caminos de acceso  
-5.14 Dependencias de red  
-5.15 Diagnóstico básico  
-5.16 Estado, historia y pendientes  
-5.17 Cierre
+- [5.1 Función de la red en `serviplan`](#51-función-de-la-red-en-serviplan)
+- [5.2 Topología general](#52-topología-general)
+- [5.3 Direccionamiento LAN](#53-direccionamiento-lan)
+- [5.4 Bridge de Proxmox](#54-bridge-de-proxmox)
+- [5.5 Reservas DHCP](#55-reservas-dhcp)
+- [5.6 Resolución de nombres](#56-resolución-de-nombres)
+- [5.7 Acceso administrativo por SSH](#57-acceso-administrativo-por-ssh)
+- [5.8 Tailscale](#58-tailscale)
+- [5.9 Tailscale Serve](#59-tailscale-serve)
+- [5.10 Servicios publicados](#510-servicios-publicados)
+- [5.11 Por qué no se abren puertos en el router](#511-por-qué-no-se-abren-puertos-en-el-router)
+- [5.12 HTTP dentro de la tailnet](#512-http-dentro-de-la-tailnet)
+- [5.13 Caminos de acceso](#513-caminos-de-acceso)
+- [5.14 Dependencias de red](#514-dependencias-de-red)
+- [5.15 Diagnóstico básico](#515-diagnóstico-básico)
+- [5.16 Estado, historia y pendientes](#516-estado-historia-y-pendientes)
+- [5.17 Cierre](#517-cierre)
 
 ---
 
@@ -3317,22 +3373,22 @@ La separación entre caminos permite diagnosticar sin convertir cada incidencia 
 
 ## Índice
 
-6.1 Función de CT100  
-6.2 Configuración del contenedor  
-6.3 Arquitectura interna  
-6.4 Servicios del stack  
-6.5 Red y acceso  
-6.6 Almacenamiento  
-6.7 Base de datos  
-6.8 Machine learning  
-6.9 Arranque y operación  
-6.10 Backup local  
-6.11 Backup remoto  
-6.12 Recuperación  
-6.13 Validación  
-6.14 Incidencias y lecciones  
-6.15 Estado actual y pendientes  
-6.16 Cierre
+- [6.1 Función de CT100](#61-función-de-ct100)
+- [6.2 Configuración del contenedor](#62-configuración-del-contenedor)
+- [6.3 Arquitectura interna](#63-arquitectura-interna)
+- [6.4 Servicios del stack](#64-servicios-del-stack)
+- [6.5 Red y acceso](#65-red-y-acceso)
+- [6.6 Almacenamiento](#66-almacenamiento)
+- [6.7 Base de datos](#67-base-de-datos)
+- [6.8 Machine learning](#68-machine-learning)
+- [6.9 Arranque y operación](#69-arranque-y-operación)
+- [6.10 Backup local](#610-backup-local)
+- [6.11 Backup remoto](#611-backup-remoto)
+- [6.12 Recuperación](#612-recuperación)
+- [6.13 Validación](#613-validación)
+- [6.14 Incidencias y lecciones](#614-incidencias-y-lecciones)
+- [6.15 Estado actual y pendientes](#615-estado-actual-y-pendientes)
+- [6.16 Cierre](#616-cierre)
 
 ---
 
@@ -3765,23 +3821,23 @@ Las fotografías y la capacidad de reconstruir no.
 
 ## Índice
 
-7.1 Función de CT101  
-7.2 Configuración del contenedor  
-7.3 Arquitectura interna  
-7.4 Navidrome  
-7.5 Jellyfin  
-7.6 Bibliotecas multimedia  
-7.7 Red y acceso  
-7.8 Almacenamiento  
-7.9 GPU y aceleración  
-7.10 Arranque y operación  
-7.11 Backup local  
-7.12 Backup remoto  
-7.13 Recuperación  
-7.14 Validación  
-7.15 Incidencias y lecciones  
-7.16 Estado actual y pendientes  
-7.17 Cierre
+- [7.1 Función de CT101](#71-función-de-ct101)
+- [7.2 Configuración del contenedor](#72-configuración-del-contenedor)
+- [7.3 Arquitectura interna](#73-arquitectura-interna)
+- [7.4 Navidrome](#74-navidrome)
+- [7.5 Jellyfin](#75-jellyfin)
+- [7.6 Bibliotecas multimedia](#76-bibliotecas-multimedia)
+- [7.7 Red y acceso](#77-red-y-acceso)
+- [7.8 Almacenamiento](#78-almacenamiento)
+- [7.9 GPU y aceleración](#79-gpu-y-aceleración)
+- [7.10 Arranque y operación](#710-arranque-y-operación)
+- [7.11 Backup local](#711-backup-local)
+- [7.12 Backup remoto](#712-backup-remoto)
+- [7.13 Recuperación](#713-recuperación)
+- [7.14 Validación](#714-validación)
+- [7.15 Incidencias y lecciones](#715-incidencias-y-lecciones)
+- [7.16 Estado actual y pendientes](#716-estado-actual-y-pendientes)
+- [7.17 Cierre](#717-cierre)
 
 ---
 
@@ -4211,23 +4267,23 @@ Es conservar lo importante, saber qué puede regenerarse y poder reconstruir el 
 
 ## Índice
 
-8.1 La función real de un backup  
-8.2 Principios de protección  
-8.3 Clasificación de datos  
-8.4 Arquitectura de copias  
-8.5 HDDBU  
-8.6 SwissBackup  
-8.7 Backup del host  
-8.8 Backup de CT100  
-8.9 Backup de CT101  
-8.10 Manifiestos, hashes y logs  
-8.11 Frecuencias  
-8.12 Recuperación local  
-8.13 Recuperación remota  
-8.14 Validación  
-8.15 Limitaciones conocidas  
-8.16 Orden de reconstrucción  
-8.17 Cierre
+- [8.1 La función real de un backup](#81-la-función-real-de-un-backup)
+- [8.2 Principios de protección](#82-principios-de-protección)
+- [8.3 Clasificación de datos](#83-clasificación-de-datos)
+- [8.4 Arquitectura de copias](#84-arquitectura-de-copias)
+- [8.5 HDDBU](#85-hddbu)
+- [8.6 SwissBackup](#86-swissbackup)
+- [8.7 Backup del host](#87-backup-del-host)
+- [8.8 Backup de CT100](#88-backup-de-ct100)
+- [8.9 Backup de CT101](#89-backup-de-ct101)
+- [8.10 Manifiestos, hashes y logs](#810-manifiestos-hashes-y-logs)
+- [8.11 Frecuencias](#811-frecuencias)
+- [8.12 Recuperación local](#812-recuperación-local)
+- [8.13 Recuperación remota](#813-recuperación-remota)
+- [8.14 Validación](#814-validación)
+- [8.15 Limitaciones conocidas](#815-limitaciones-conocidas)
+- [8.16 Orden de reconstrucción](#816-orden-de-reconstrucción)
+- [8.17 Cierre](#817-cierre)
 
 ---
 
@@ -4674,23 +4730,23 @@ Es poder recuperar lo importante y reconstruir lo necesario.
 
 ## Índice
 
-9.1 Finalidad del mantenimiento  
-9.2 Principios operativos  
-9.3 Frecuencias y ritmos  
-9.4 Revisión del host  
-9.5 Revisión de CT100  
-9.6 Revisión de CT101  
-9.7 Actualizaciones  
-9.8 Espacio y almacenamiento  
-9.9 Backups  
-9.10 Red y acceso remoto  
-9.11 Temperaturas y batería  
-9.12 Logs y servicios  
-9.13 Mantenimiento antes de cambios importantes  
-9.14 Comprobaciones posteriores  
-9.15 Registro de incidencias  
-9.16 Estado, historia y pendientes  
-9.17 Cierre
+- [9.1 Finalidad del mantenimiento](#91-finalidad-del-mantenimiento)
+- [9.2 Principios operativos](#92-principios-operativos)
+- [9.3 Frecuencias y ritmos](#93-frecuencias-y-ritmos)
+- [9.4 Revisión del host](#94-revisión-del-host)
+- [9.5 Revisión de CT100](#95-revisión-de-ct100)
+- [9.6 Revisión de CT101](#96-revisión-de-ct101)
+- [9.7 Actualizaciones](#97-actualizaciones)
+- [9.8 Espacio y almacenamiento](#98-espacio-y-almacenamiento)
+- [9.9 Backups](#99-backups)
+- [9.10 Red y acceso remoto](#910-red-y-acceso-remoto)
+- [9.11 Temperaturas y batería](#911-temperaturas-y-batería)
+- [9.12 Logs y servicios](#912-logs-y-servicios)
+- [9.13 Mantenimiento antes de cambios importantes](#913-mantenimiento-antes-de-cambios-importantes)
+- [9.14 Comprobaciones posteriores](#914-comprobaciones-posteriores)
+- [9.15 Registro de incidencias](#915-registro-de-incidencias)
+- [9.16 Estado, historia y pendientes](#916-estado-historia-y-pendientes)
+- [9.17 Cierre](#917-cierre)
 
 ---
 
@@ -5159,26 +5215,26 @@ Un mantenimiento correcto deja tres resultados:
 
 ## Índice
 
-10.1 Qué significa reconstruir  
-10.2 Escenarios de desastre  
-10.3 Prioridades  
-10.4 Dependencias previas  
-10.5 Material necesario  
-10.6 Recuperación de credenciales  
-10.7 Preparación del hardware  
-10.8 Instalación de Proxmox  
-10.9 Configuración del host  
-10.10 Red  
-10.11 Almacenamiento  
-10.12 Tailscale y SSH  
-10.13 Restauración de CT100  
-10.14 Reconstrucción de CT101  
-10.15 Publicación de servicios  
-10.16 Restauración de backups  
-10.17 Validación integral  
-10.18 Qué no debe hacerse  
-10.19 Estado de las pruebas  
-10.20 Cierre
+- [10.1 Qué significa reconstruir](#101-qué-significa-reconstruir)
+- [10.2 Escenarios de desastre](#102-escenarios-de-desastre)
+- [10.3 Prioridades](#103-prioridades)
+- [10.4 Dependencias previas](#104-dependencias-previas)
+- [10.5 Material necesario](#105-material-necesario)
+- [10.6 Recuperación de credenciales](#106-recuperación-de-credenciales)
+- [10.7 Preparación del hardware](#107-preparación-del-hardware)
+- [10.8 Instalación de Proxmox](#108-instalación-de-proxmox)
+- [10.9 Configuración del host](#109-configuración-del-host)
+- [10.10 Red](#1010-red)
+- [10.11 Almacenamiento](#1011-almacenamiento)
+- [10.12 Tailscale y SSH](#1012-tailscale-y-ssh)
+- [10.13 Restauración de CT100](#1013-restauración-de-ct100)
+- [10.14 Reconstrucción de CT101](#1014-reconstrucción-de-ct101)
+- [10.15 Publicación de servicios](#1015-publicación-de-servicios)
+- [10.16 Restauración de backups](#1016-restauración-de-backups)
+- [10.17 Validación integral](#1017-validación-integral)
+- [10.18 Qué no debe hacerse](#1018-qué-no-debe-hacerse)
+- [10.19 Estado de las pruebas](#1019-estado-de-las-pruebas)
+- [10.20 Cierre](#1020-cierre)
 
 ---
 
@@ -5670,23 +5726,23 @@ No antes.
 
 ## Índice
 
-11.1 Por qué conservar las incidencias  
-11.2 Ubuntu Server no fue un fracaso  
-11.3 La migración Big Bang  
-11.4 CT102 y el valor de eliminar  
-11.5 `vfio_virqfd`  
-11.6 HTTPS interno sobre Tailscale  
-11.7 Batería y ausencia de interfaces estándar  
-11.8 Backup local y `rsync -H`  
-11.9 WAL y SHM de Jellyfin  
-11.10 Servicios `oneshot` e interpretación de estados  
-11.11 PostgreSQL «system is starting up»  
-11.12 Operaciones S3 sin progreso visible  
-11.13 Rutas y contexto de ejecución  
-11.14 Diferenciar host, LXC y Docker  
-11.15 Documentación desactualizada  
-11.16 Resumen de lecciones permanentes  
-11.17 Cierre
+- [11.1 Por qué conservar las incidencias](#111-por-qué-conservar-las-incidencias)
+- [11.2 Ubuntu Server no fue un fracaso](#112-ubuntu-server-no-fue-un-fracaso)
+- [11.3 La migración Big Bang](#113-la-migración-big-bang)
+- [11.4 CT102 y el valor de eliminar](#114-ct102-y-el-valor-de-eliminar)
+- [11.5 `vfio_virqfd`](#115-vfio_virqfd)
+- [11.6 HTTPS interno sobre Tailscale](#116-https-interno-sobre-tailscale)
+- [11.7 Batería y ausencia de interfaces estándar](#117-batería-y-ausencia-de-interfaces-estándar)
+- [11.8 Backup local y `rsync -H`](#118-backup-local-y-rsync--h)
+- [11.9 WAL y SHM de Jellyfin](#119-wal-y-shm-de-jellyfin)
+- [11.10 Servicios `oneshot` e interpretación de estados](#1110-servicios-oneshot-e-interpretación-de-estados)
+- [11.11 PostgreSQL «system is starting up»](#1111-postgresql-system-is-starting-up)
+- [11.12 Operaciones S3 sin progreso visible](#1112-operaciones-s3-sin-progreso-visible)
+- [11.13 Rutas y contexto de ejecución](#1113-rutas-y-contexto-de-ejecución)
+- [11.14 Diferenciar host, LXC y Docker](#1114-diferenciar-host-lxc-y-docker)
+- [11.15 Documentación desactualizada](#1115-documentación-desactualizada)
+- [11.16 Resumen de lecciones permanentes](#1116-resumen-de-lecciones-permanentes)
+- [11.17 Cierre](#1117-cierre)
 
 ---
 
@@ -6255,22 +6311,22 @@ Está en impedir que vuelva a repetirse sin conocimiento.
 
 ## Índice
 
-12.1 Operar no es intervenir constantemente  
-12.2 Comprender antes de ejecutar  
-12.3 Una cosa cada vez  
-12.4 No borrar sin autorización  
-12.5 La reconstrucción como criterio de verdad  
-12.6 Simplicidad operativa  
-12.7 Estado actual, historia y pendientes  
-12.8 Logs y evidencia  
-12.9 Automatización proporcionada  
-12.10 Estabilidad frente a curiosidad  
-12.11 Seguridad contextual  
-12.12 Coste, tiempo y energía  
-12.13 El papel de la inteligencia artificial  
-12.14 Cómo tomar decisiones  
-12.15 Principios operativos permanentes  
-12.16 Cierre
+- [12.1 Operar no es intervenir constantemente](#121-operar-no-es-intervenir-constantemente)
+- [12.2 Comprender antes de ejecutar](#122-comprender-antes-de-ejecutar)
+- [12.3 Una cosa cada vez](#123-una-cosa-cada-vez)
+- [12.4 No borrar sin autorización](#124-no-borrar-sin-autorización)
+- [12.5 La reconstrucción como criterio de verdad](#125-la-reconstrucción-como-criterio-de-verdad)
+- [12.6 Simplicidad operativa](#126-simplicidad-operativa)
+- [12.7 Estado actual, historia y pendientes](#127-estado-actual-historia-y-pendientes)
+- [12.8 Logs y evidencia](#128-logs-y-evidencia)
+- [12.9 Automatización proporcionada](#129-automatización-proporcionada)
+- [12.10 Estabilidad frente a curiosidad](#1210-estabilidad-frente-a-curiosidad)
+- [12.11 Seguridad contextual](#1211-seguridad-contextual)
+- [12.12 Coste, tiempo y energía](#1212-coste-tiempo-y-energía)
+- [12.13 El papel de la inteligencia artificial](#1213-el-papel-de-la-inteligencia-artificial)
+- [12.14 Cómo tomar decisiones](#1214-cómo-tomar-decisiones)
+- [12.15 Principios operativos permanentes](#1215-principios-operativos-permanentes)
+- [12.16 Cierre](#1216-cierre)
 
 ---
 
@@ -6652,21 +6708,21 @@ Es el que sigue funcionando, puede explicarse y no esclaviza a quien lo mantiene
 
 ## Índice
 
-13.1 Función de este capítulo  
-13.2 Estado general del sistema  
-13.3 Host Proxmox  
-13.4 Red y acceso  
-13.5 CT100 · Immich  
-13.6 CT101 · Multimedia  
-13.7 Backups  
-13.8 Documentación  
-13.9 Seguridad  
-13.10 Limitaciones conocidas  
-13.11 Pendientes técnicos  
-13.12 Pendientes documentales  
-13.13 Pendientes no urgentes  
-13.14 Qué no debe considerarse pendiente  
-13.15 Cierre
+- [13.1 Función de este capítulo](#131-función-de-este-capítulo)
+- [13.2 Estado general del sistema](#132-estado-general-del-sistema)
+- [13.3 Host Proxmox](#133-host-proxmox)
+- [13.4 Red y acceso](#134-red-y-acceso)
+- [13.5 CT100 · Immich](#135-ct100--immich)
+- [13.6 CT101 · Multimedia](#136-ct101--multimedia)
+- [13.7 Backups](#137-backups)
+- [13.8 Documentación](#138-documentación)
+- [13.9 Seguridad](#139-seguridad)
+- [13.10 Limitaciones conocidas](#1310-limitaciones-conocidas)
+- [13.11 Pendientes técnicos](#1311-pendientes-técnicos)
+- [13.12 Pendientes documentales](#1312-pendientes-documentales)
+- [13.13 Pendientes no urgentes](#1313-pendientes-no-urgentes)
+- [13.14 Qué no debe considerarse pendiente](#1314-qué-no-debe-considerarse-pendiente)
+- [13.15 Cierre](#1315-cierre)
 
 ---
 
@@ -7084,22 +7140,22 @@ Es saber exactamente cuáles son.
 
 ## Índice
 
-14.1 Función de la hoja de ruta  
-14.2 Criterios de prioridad  
-14.3 Prioridad 1 · Libertad y necesidad personal  
-14.4 Prioridad 2 · Riesgos reales  
-14.5 Prioridad 3 · Mejoras no urgentes  
-14.6 Seguridad  
-14.7 Backups  
-14.8 Observabilidad  
-14.9 Red  
-14.10 Virtualización y laboratorio  
-14.11 Documentación  
-14.12 Hardware  
-14.13 Servicios  
-14.14 Proyectos aparcados  
-14.15 Cómo cerrar una línea de trabajo  
-14.16 Cierre
+- [14.1 Función de la hoja de ruta](#141-función-de-la-hoja-de-ruta)
+- [14.2 Criterios de prioridad](#142-criterios-de-prioridad)
+- [14.3 Prioridad 1 · Libertad y necesidad personal](#143-prioridad-1--libertad-y-necesidad-personal)
+- [14.4 Prioridad 2 · Riesgos reales](#144-prioridad-2--riesgos-reales)
+- [14.5 Prioridad 3 · Mejoras no urgentes](#145-prioridad-3--mejoras-no-urgentes)
+- [14.6 Seguridad](#146-seguridad)
+- [14.7 Backups](#147-backups)
+- [14.8 Observabilidad](#148-observabilidad)
+- [14.9 Red](#149-red)
+- [14.10 Virtualización y laboratorio](#1410-virtualización-y-laboratorio)
+- [14.11 Documentación](#1411-documentación)
+- [14.12 Hardware](#1412-hardware)
+- [14.13 Servicios](#1413-servicios)
+- [14.14 Proyectos aparcados](#1414-proyectos-aparcados)
+- [14.15 Cómo cerrar una línea de trabajo](#1415-cómo-cerrar-una-línea-de-trabajo)
+- [14.16 Cierre](#1416-cierre)
 
 ---
 
@@ -7443,16 +7499,16 @@ A veces es no tocar nada.
 
 ## Índice
 
-15.1 Qué es finalmente `serviplan`  
-15.2 Lo que se construyó  
-15.3 Lo que se aprendió  
-15.4 Lo que permanece  
-15.5 Lo que puede cambiar  
-15.6 El valor de la documentación  
-15.7 La soberanía posible  
-15.8 El equilibrio entre técnica y vida  
-15.9 El lector futuro  
-15.10 Cierre final
+- [15.1 Qué es finalmente `serviplan`](#151-qué-es-finalmente-serviplan)
+- [15.2 Lo que se construyó](#152-lo-que-se-construyó)
+- [15.3 Lo que se aprendió](#153-lo-que-se-aprendió)
+- [15.4 Lo que permanece](#154-lo-que-permanece)
+- [15.5 Lo que puede cambiar](#155-lo-que-puede-cambiar)
+- [15.6 El valor de la documentación](#156-el-valor-de-la-documentación)
+- [15.7 La soberanía posible](#157-la-soberanía-posible)
+- [15.8 El equilibrio entre técnica y vida](#158-el-equilibrio-entre-técnica-y-vida)
+- [15.9 El lector futuro](#159-el-lector-futuro)
+- [15.10 Cierre final](#1510-cierre-final)
 
 ---
 
